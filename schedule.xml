@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>// Place global declarations here.
+typedef int[1,9] x;
+typedef int[1,9] y;
+typedef int[1,9] a;
+typedef int[1,9] b;
+
+int x1;
+int y1;
+int a1;
+int b1;
+
+
+
+</declaration><template><name x="5" y="5">schedule</name><declaration>// Place local declarations here.
+bool pass(x xx,y yy,a aa,b bb){
+
+if ((xx - yy &gt; aa - bb) &amp;&amp; (xx / yy &lt; aa / bb)){
+
+
+return true;
+
+}
+
+return false;
+}</declaration><location id="id0" x="240" y="-48" color="#00ff00"><name x="230" y="-78">Goal</name></location><location id="id1" x="16" y="-40"><name x="6" y="-70">Start</name><committed/></location><init ref="id1"/><transition><source ref="id1"/><target ref="id1"/><nail x="-80" y="-24"/><nail x="-96" y="-64"/></transition><transition><source ref="id1"/><target ref="id0"/><label kind="select" x="68" y="-89">xx:x, yy:y, aa:a, bb:b</label><label kind="guard" x="68" y="-74">pass(xx,yy,aa,bb)</label><label kind="assignment" x="68" y="-44">x1 = xx,
+y1 = yy,
+a1 = aa,
+b1 = bb</label></transition></template><system>// Place template instantiations here.
+//Process = Template();
+
+// List one or more processes to be composed into a system.
+system schedule;</system></nta>
