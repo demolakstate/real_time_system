@@ -1,2 +1,2 @@
 # real_time_system
-Real Time System projects using UPPAAL and jSPIN Verification System
+Real Time System projects using UPPAAL to solve tic tac toe game problem
